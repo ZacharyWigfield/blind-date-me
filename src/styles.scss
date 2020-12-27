@@ -1,1 +1,108 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+/* For use in src/lib/core/theming/_palette.scss */
+$md-kissme: (
+    50 : #f8eff4,
+    100 : #edd7e3,
+    200 : #e1bdd0,
+    300 : #d4a3bd,
+    400 : #cb8fae,
+    500 : #c27ba0,
+    600 : #bc7398,
+    700 : #b4688e,
+    800 : #ac5e84,
+    900 : #9f4b73,
+    A100 : #fffcfd,
+    A200 : #ffc9e2,
+    A400 : #ff96c7,
+    A700 : #ff7cb9,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-romance: (
+    50 : #fdf8e6,
+    100 : #fbedc2,
+    200 : #f8e199,
+    300 : #f5d470,
+    400 : #f3cb51,
+    500 : #f1c232,
+    600 : #efbc2d,
+    700 : #edb426,
+    800 : #ebac1f,
+    900 : #e79f13,
+    A100 : #ffffff,
+    A200 : #fff4e2,
+    A400 : #ffe2af,
+    A700 : #ffd896,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$blind-date-me-app-primary: mat-palette($md-kissme);
+$blind-date-me-app-accent: mat-palette($md-romance);
+
+// The warn palette is optional (defaults to red).
+$blind-date-me-app-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$blind-date-me-app-theme: mat-light-theme((
+  color: (
+    primary: $blind-date-me-app-primary,
+    accent: $blind-date-me-app-accent,
+    warn: $blind-date-me-app-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($blind-date-me-app-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
