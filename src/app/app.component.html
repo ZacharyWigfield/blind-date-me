@@ -17,8 +17,6 @@
 <mat-toolbar>
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-
-
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
 
@@ -28,5 +26,4 @@
 
 
 <!-- The content of the page -->
-<button mat-raised-button color="primary">Testy Button</button>
 <router-outlet></router-outlet>
