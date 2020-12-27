@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "blinder-app-72c43": {
+      "hosting": {
+        "blind-date-me-app": [
+          "blinder-app-72c43"
+        ]
+      }
+    }
+  }
+}
