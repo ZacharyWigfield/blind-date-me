@@ -10,7 +10,11 @@ import { EmailLoginComponent } from './email-login/email-login.component';
 
 
 @NgModule({
-  declarations: [LoginPageComponent, GoogleSigninDirective, EmailLoginComponent],
+  declarations: [
+    LoginPageComponent,
+    GoogleSigninDirective,
+    EmailLoginComponent
+  ],
   imports: [
     CommonModule,
     UserRoutingModule,
