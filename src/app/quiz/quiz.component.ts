@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SnackService } from '../services/snack.service';
+import { DatabaseService } from '../services/database.service';
 
 @Component({
   selector: 'app-quiz',
@@ -8,7 +9,7 @@ import { SnackService } from '../services/snack.service';
 })
 export class QuizComponent implements OnInit {
 
-  constructor(private snack: SnackService) { }
+  constructor(private snack: SnackService, private db: DatabaseService) { }
 
   ngOnInit(): void {
   }
@@ -71,6 +72,7 @@ export class QuizComponent implements OnInit {
     if (this.allDefinedBinary === true){
       //TODO: replace this with logic that sends the array to firebase and stores it under the user logged in currently
       console.log("all items selected")
+      this.db.createAnswerArray(this.inputArray);
     }
   }
 
