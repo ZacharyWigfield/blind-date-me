@@ -1,1 +1,134 @@
-<p>quiz works!</p>
+<div class="question-div">
+    <label id="genre-radio-group-label">What is your favorite movie genre?</label>
+    <mat-radio-group aria-labelledby="genre-radio-group-label" class="radio-group" [(ngModel)]="favoriteMovieGenre">
+        <mat-radio-button class="radio-button" *ngFor="let genre of genres" [value]="genre">
+            {{genre}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="time-radio-group-label">Are you more of a morning or night person?</label>
+    <mat-radio-group aria-labelledby="time-radio-group-label" class="radio-group" [(ngModel)]="morningOrNight">
+        <mat-radio-button class="radio-button" *ngFor="let time of times" [value]="time">
+            {{time}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="country-radio-group-label">Which of these countries would you most like to visit?</label>
+    <mat-radio-group aria-labelledby="country-radio-group-label" class="radio-group" [(ngModel)]="countryVisit">
+        <mat-radio-button class="radio-button" *ngFor="let country of countries" [value]="country">
+            {{country}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="activityLevel-radio-group-label">Are you more of an active or a relaxed person?</label>
+    <mat-radio-group aria-labelledby="activityLevel-radio-group-label" class="radio-group" [(ngModel)]="activeOrRelaxed">
+        <mat-radio-button class="radio-button" *ngFor="let activityLevel of activityLevels" [value]="activityLevel">
+            {{activityLevel}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="food-radio-group-label">How often do you think about food throughout the day?</label>
+    <mat-radio-group aria-labelledby="food-radio-group-label" class="radio-group" [(ngModel)]="foodThoughts">
+        <mat-radio-button class="radio-button" *ngFor="let foodFreq of foodFreqs" [value]="foodFreq">
+            {{foodFreq}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="journeys-radio-group-label">Do you prefer the journey or the destination?</label>
+    <mat-radio-group aria-labelledby="journeys-radio-group-label" class="radio-group" [(ngModel)]="journeyOrDestination">
+        <mat-radio-button class="radio-button" *ngFor="let journey of journeys" [value]="journey">
+            {{journey}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="season-radio-group-label">What is your favorite season?</label>
+    <mat-radio-group aria-labelledby="radio-group-label" class="radio-group" [(ngModel)]="favoriteSeason">
+        <mat-radio-button class="radio-button" *ngFor="let season of seasons" [value]="season">
+            {{season}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="sensories-radio-group-label">Are you more of an aural (audio) or visual person?</label>
+    <mat-radio-group aria-labelledby="sensories-group-label" class="radio-group" [(ngModel)]="audioOrVisual">
+        <mat-radio-button class="radio-button" *ngFor="let sensory of sensories" [value]="sensory">
+            {{sensory}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="date-radio-group-label">What would be your top choice for a first date?</label>
+    <mat-radio-group aria-labelledby="date-radio-group-label" class="radio-group" [(ngModel)]="firstDate">
+        <mat-radio-button class="radio-button" *ngFor="let date of dates" [value]="date">
+            {{date}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="pets-radio-group-label">Do you prefer cats or dogs?</label>
+    <mat-radio-group aria-labelledby="pets-radio-group-label" class="radio-group" [(ngModel)]="dogOrCat">
+        <mat-radio-button class="radio-button" *ngFor="let pet of pets" [value]="pet">
+            {{pet}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="zoo-radio-group-label">You're at the zoo. Which animal do you want to see first?</label>
+    <mat-radio-group aria-labelledby="zoo-radio-group-label" class="radio-group" [(ngModel)]="zooAnimal">
+        <mat-radio-button class="radio-button" *ngFor="let animal of animals" [value]="animal">
+            {{animal}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="tidiness-radio-group-label">Compared to the average person are you messy or clean?</label>
+    <mat-radio-group aria-labelledby="tidiness-radio-group-label" class="radio-group" [(ngModel)]="messyOrClean">
+        <mat-radio-button class="radio-button" *ngFor="let tidinessLevel of tidinessLevels" [value]="tidinessLevel">
+            {{tidinessLevel}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="music-radio-group-label">What is your favorite movie genre?</label>
+    <mat-radio-group aria-labelledby="music-radio-group-label" class="radio-group" [(ngModel)]="favoriteMusicGenre">
+        <mat-radio-button class="radio-button" *ngFor="let music of musics" [value]="music">
+            {{music}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="travelDesire-radio-group-label">Would you prefer frequent travel or staying near home?</label>
+    <mat-radio-group aria-labelledby="travelDesire-radio-group-label" class="radio-group" [(ngModel)]="travelOrHome">
+        <mat-radio-button class="radio-button" *ngFor="let travelDesire of travelDesires" [value]="travelDesire">
+            {{travelDesire}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="question-div">
+    <label id="political-radio-group-label">What best describes your political affiliation?</label>
+    <mat-radio-group aria-labelledby="political-radio-group-label" class="radio-group" [(ngModel)]="politicalAffiliation">
+        <mat-radio-button class="radio-button" *ngFor="let politic of politics" [value]="politic">
+            {{politic}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>

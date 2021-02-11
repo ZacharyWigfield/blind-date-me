@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
-import { QuizRoutingModule } from './quiz-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
+import { QuizRoutingModule } from './quiz-routing.module';
 import { QuizComponent } from './quiz.component';
+
 
 
 
@@ -14,7 +17,9 @@ import { QuizComponent } from './quiz.component';
   imports: [
     CommonModule,
     QuizRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class QuizModule { }
