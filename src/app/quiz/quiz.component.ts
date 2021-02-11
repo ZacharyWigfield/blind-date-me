@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SnackService } from '../services/snack.service';
 
 @Component({
   selector: 'app-quiz',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizComponent implements OnInit {
 
-  constructor() { }
+  constructor(private snack: SnackService) { }
 
   ngOnInit(): void {
   }
@@ -65,7 +66,15 @@ export class QuizComponent implements OnInit {
     this.inputArray = [this.favoriteMovieGenre, this.morningOrNight, this.countryVisit, this.activeOrRelaxed, this.foodThoughts, this.journeyOrDestination, this.favoriteSeason,
     this.audioOrVisual, this.firstDate, this.dogOrCat, this.zooAnimal, this.messyOrClean, this.favoriteMusicGenre, this.travelOrHome, this.politicalAffiliation]
 
-    console.log(this.submitForm)
+    this.inputArray.forEach(element => this.checkForUndefined(element))
+
+    console.log(this.inputArray)
+  }
+
+  checkForUndefined(item) {
+    if (item === undefined){
+      this.snack.formError();
+    }
   }
 
 }

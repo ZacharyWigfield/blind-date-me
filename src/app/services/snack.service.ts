@@ -23,4 +23,11 @@ export class SnackService {
       )
       .subscribe();
   }
+
+  formError() {
+    this.snackBar.open('Please pick an option for every question', 'OK', {
+      duration: 5000
+    });
+  }
+
 }
