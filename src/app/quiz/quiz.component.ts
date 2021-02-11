@@ -12,7 +12,9 @@ export class QuizComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  inputArray: string[];
+
+
   favoriteMovieGenre: string;
   genres: string[] = ['Action', 'Comedy', 'Horror', 'Drama'];
 
@@ -57,5 +59,13 @@ export class QuizComponent implements OnInit {
 
   politicalAffiliation: string;
   politics: string[] = ['Left-wing', 'Moderate-left', 'Moderate-Right', 'Right-wing'];
+
+  // calls on submit button click. Gathers all the radio buttons and puts them into an array. Checks the array length to ensure all inputs were selected. Sends that form to the firebase database.
+  submitForm() {
+    this.inputArray = [this.favoriteMovieGenre, this.morningOrNight, this.countryVisit, this.activeOrRelaxed, this.foodThoughts, this.journeyOrDestination, this.favoriteSeason,
+    this.audioOrVisual, this.firstDate, this.dogOrCat, this.zooAnimal, this.messyOrClean, this.favoriteMusicGenre, this.travelOrHome, this.politicalAffiliation]
+
+    console.log(this.submitForm)
+  }
 
 }
