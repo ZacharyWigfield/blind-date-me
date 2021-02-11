@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SnackService } from '../services/snack.service';
 import { DatabaseService } from '../services/database.service';
+import { Answers } from './answers.model'
 
 @Component({
   selector: 'app-quiz',
