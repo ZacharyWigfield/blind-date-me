@@ -14,6 +14,7 @@ export class QuizComponent implements OnInit {
   }
 
   inputArray: string[];
+  allDefinedBinary: boolean = false;
 
 
   favoriteMovieGenre: string;
@@ -61,19 +62,26 @@ export class QuizComponent implements OnInit {
   politicalAffiliation: string;
   politics: string[] = ['Left-wing', 'Moderate-left', 'Moderate-Right', 'Right-wing'];
 
-  // calls on submit button click. Gathers all the radio buttons and puts them into an array. Checks the array length to ensure all inputs were selected. Sends that form to the firebase database.
+  // calls on submit button click. Gathers all the radio buttons and puts them into an array. Checks each array item to ensure all inputs were selected. If all were selected sends that form to the firebase database.
   submitForm() {
     this.inputArray = [this.favoriteMovieGenre, this.morningOrNight, this.countryVisit, this.activeOrRelaxed, this.foodThoughts, this.journeyOrDestination, this.favoriteSeason,
     this.audioOrVisual, this.firstDate, this.dogOrCat, this.zooAnimal, this.messyOrClean, this.favoriteMusicGenre, this.travelOrHome, this.politicalAffiliation]
 
     this.inputArray.forEach(element => this.checkForUndefined(element))
-
-    console.log(this.inputArray)
+    if (this.allDefinedBinary === true){
+      //TODO: replace this with logic that sends the array to firebase and stores it under the user logged in currently
+      console.log("all items selected")
+    }
   }
 
+  // checks that every input has a value and if it doesn't sends an error message to the user
   checkForUndefined(item) {
     if (item === undefined){
       this.snack.formError();
+      this.allDefinedBinary = false;
+    }
+    else {
+      this.allDefinedBinary = true;
     }
   }
 
