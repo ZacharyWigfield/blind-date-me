@@ -13,13 +13,16 @@ export class LandingPageComponent implements OnInit {
   constructor(private db: DatabaseService) { }
   userAnswers: Answers;
   sub: Subscription;
+  answerArray: [];
 
   ngOnInit(): void {
     this.sub = this.db.getUserAnswers().subscribe(userAnswers => (this.userAnswers = userAnswers))
+    
   }
 
   retrieveAnswers() {
-    console.log(this.userAnswers[0].answers)
+    this.answerArray = this.userAnswers[0].answers
+    console.log(this.answerArray)
   }
 
 }
