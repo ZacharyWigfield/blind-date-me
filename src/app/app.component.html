@@ -1,0 +1,33 @@
+<mat-sidenav-container class="sidenav-container">
+
+    <!-- SIDENAV -->
+
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="false">
+        
+
+        <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
+
+    </mat-sidenav>
+
+</mat-sidenav-container>
+
+<!-- TOP TOOLBAR-->
+
+<mat-toolbar>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+
+    <button mat-raised-button color="primary" title="I hardly know her" routerLink="/">BLINDR</button>
+
+    <button mat-raised-button color="primary"  routerLink="/quiz">TAKE THE QUIZ</button>
+
+    <button mat-raised-button color="accent"  routerLink="/login">LOGIN</button>
+
+</mat-toolbar>
+
+
+<!-- The content of the page -->
+<router-outlet></router-outlet>
