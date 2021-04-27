@@ -30,4 +30,10 @@ export class SnackService {
     });
   }
 
+  alreadyAnsweredError() {
+    this.snackBar.open('Sorry, you have already completed the quiz', 'OK', {
+      duration: 5000
+    });
+  }
+
 }
