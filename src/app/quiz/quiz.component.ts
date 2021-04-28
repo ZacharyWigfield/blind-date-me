@@ -18,6 +18,18 @@ export class QuizComponent implements OnInit {
   inputArray: string[];
   allDefinedBinary: boolean = false;
 
+  userGender: string;
+  genders: string[] = ['Man', 'Woman', 'Non Binary'];
+
+  genderAttraction: string[];
+  attractions: string[] = ['Man', 'Woman', 'Non Binary'];
+
+  userAge: number;
+
+  ageAttraction: number;
+
+  state: string;
+  states: string[] = []
 
   favoriteMovieGenre: string;
   genres: string[] = ['Action', 'Comedy', 'Horror', 'Drama'];

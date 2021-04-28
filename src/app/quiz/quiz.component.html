@@ -1,10 +1,10 @@
 <div class="question-div">
     <label id="user-gender-label">What is your gender?</label>
-    <!-- <mat-radio-group aria-labelledby="genre-radio-group-label" class="radio-group" [(ngModel)]="favoriteMovieGenre">
-        <mat-radio-button class="radio-button" *ngFor="let genre of genres" [value]="genre">
-            {{genre}}
+    <mat-radio-group aria-labelledby="user-gender-radio-group-label" class="radio-group" [(ngModel)]="userGender">
+        <mat-radio-button class="radio-button" *ngFor="let gender of genders" [value]="genders">
+            {{gender}}
         </mat-radio-button>
-    </mat-radio-group> -->
+    </mat-radio-group>
 </div>
 
 <div class="question-div">
@@ -14,6 +14,16 @@
             {{genre}}
         </mat-radio-button>
     </mat-radio-group> -->
+    <span class="checkbox-span">
+        <ul>
+            <li *ngFor="let attraction of attractions">
+                <mat-checkbox aria-labelledby="user-gender-attraction-checkbox-label" class="checkbox-group"
+                    [(ngModel)]="genderAttraction">
+                    {{attraction}}
+                </mat-checkbox>
+            </li>
+        </ul>
+    </span>
 </div>
 
 <div class="question-div">
@@ -72,7 +82,8 @@
 
 <div class="question-div">
     <label id="activityLevel-radio-group-label">Are you more of an active or a relaxed person?</label>
-    <mat-radio-group aria-labelledby="activityLevel-radio-group-label" class="radio-group" [(ngModel)]="activeOrRelaxed">
+    <mat-radio-group aria-labelledby="activityLevel-radio-group-label" class="radio-group"
+        [(ngModel)]="activeOrRelaxed">
         <mat-radio-button class="radio-button" *ngFor="let activityLevel of activityLevels" [value]="activityLevel">
             {{activityLevel}}
         </mat-radio-button>
@@ -90,7 +101,8 @@
 
 <div class="question-div">
     <label id="journeys-radio-group-label">Do you prefer the journey or the destination?</label>
-    <mat-radio-group aria-labelledby="journeys-radio-group-label" class="radio-group" [(ngModel)]="journeyOrDestination">
+    <mat-radio-group aria-labelledby="journeys-radio-group-label" class="radio-group"
+        [(ngModel)]="journeyOrDestination">
         <mat-radio-button class="radio-button" *ngFor="let journey of journeys" [value]="journey">
             {{journey}}
         </mat-radio-button>
@@ -171,7 +183,8 @@
 
 <div class="question-div">
     <label id="political-radio-group-label">What best describes your political affiliation?</label>
-    <mat-radio-group aria-labelledby="political-radio-group-label" class="radio-group" [(ngModel)]="politicalAffiliation">
+    <mat-radio-group aria-labelledby="political-radio-group-label" class="radio-group"
+        [(ngModel)]="politicalAffiliation">
         <mat-radio-button class="radio-button" *ngFor="let politic of politics" [value]="politic">
             {{politic}}
         </mat-radio-button>
